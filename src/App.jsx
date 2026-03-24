@@ -329,6 +329,33 @@ function SectionCard({ title, subtitle, children }) {
   );
 }
 
+
+function PrimaryButton({ children, onClick, disabled }) {
+  return (
+    <button
+      type="button"
+      className="primaryButton"
+      onClick={onClick}
+      disabled={disabled}
+    >
+      {children}
+    </button>
+  );
+}
+
+function SecondaryButton({ children, onClick, disabled }) {
+  return (
+    <button
+      type="button"
+      className="secondaryButton"
+      onClick={onClick}
+      disabled={disabled}
+    >
+      {children}
+    </button>
+  );
+}
+
 function buildPrompt(form) {
   const labeledFields = [
     ["GÉNERO", form.gender],
